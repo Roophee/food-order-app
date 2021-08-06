@@ -6,7 +6,7 @@ import Modal from '../UI/Modal';
 
 const Cart = props => {
   const cartCtx = useCartContext();
-  const totalAmount = `${cartCtx.totalAmount.toFixed(2)}`;
+  const totalAmount = `${Math.abs(cartCtx.totalAmount).toFixed(2)}`;
   const hasItems = cartCtx.items.length > 0;
 
   const cartItemRemoveHandler = id => {
